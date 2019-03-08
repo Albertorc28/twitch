@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twitch</title>
+
+    <link rel="icon" href="/static/ico/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+
+    <link rel="stylesheet" type="text/css" href="/css/sala.css"/>
+
+    <link rel="stylesheet" type="text/css" href="/css/fullscreen.css"/>
+    <script src="/js/libs/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        var anfitrion = "{{.Streamer}}";
+        var usuario = "{{.Usuario}}";
+    </script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript" src="/js/sala.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="/app"><div class="logo"></div></a>
+        <div class="titulo-stream">{{.Streamer}}</div>
+        <div class="comandos">
+            <a id="fullscreen" href="#">Pantalla completa</a>
+            "  "
+            {{if .Logado}}
+                {{if .EsElStreamer}}
+                    <a href="javascript:closeStream()">Terminar mi Stream</a>
+                    "  "
+                {{end}}
+                <a href="javascript:logout()">Cerrar sesión de {{ .Usuario}}</a>
+            {{else}}
+                <a href="/sesion">Iniciar sesión</a>
+            {{end}}
+        </div>
+    </nav>
+    <div class="page" id="main-page">
+        <div class="sala" id="sala">
+            <div class="view" id="view">
+                <img id="imgView" src="" style="display: none" />
+            </div>
+            <div class="chat">
+                <div class="chat-panel" id="panel"></div>
+                <div class="chat-input">
+                        <textarea id="txtMensaje" style="resize: none" placeholder="Tu mensaje"></textarea>
+                        <input id="btnEnviar" type="button" value="Enviar" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>

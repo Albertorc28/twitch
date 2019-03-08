@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"go.toolsGopath": "D:\\Go\\MH07",
+		"go.gopath": "${workspaceFolder}\\..\\..\\",
+	}
+}

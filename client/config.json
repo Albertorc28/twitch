@@ -1,0 +1,7 @@
+{
+    "protocol": "http",
+    "host": "localhost",
+    "port": "8888",
+    "streamer": "agu",
+    "frameIntervalMs": 10 
+}

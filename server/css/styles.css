@@ -1,0 +1,155 @@
+body {
+    background-color: #4b4a4a;
+    font-size: 12pt;
+    color: whitesmoke;
+    margin:0;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100vh;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+.oculto {
+    display: none;
+}
+
+nav {
+    background-color: white;
+    height: 50px;
+    width:100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6441A4;
+    font-size: 12pt;
+}
+
+nav div {
+    margin: 5px 10px;
+}
+
+nav a:visited {
+    text-decoration: none;
+    color: #6441A4;
+}
+
+nav a:hover {
+    font-weight: bold
+}
+
+nav div.logo {
+    background: url("/static/img/twitch_logo.png") no-repeat center;
+    background-size: 150px 40px;
+    height: 40px;
+    width: 150px;
+    float:left;
+}
+
+nav div.comandos {
+    float: right;
+    padding: 10px;
+}
+div.page {
+    margin: 0;
+    overflow-y: auto;
+    width: 100%;
+        /* Firefox */
+        height: -moz-calc(100% - 50px);
+        /* WebKit */
+        height: -webkit-calc(100% - 50px);
+        /* Opera */
+        height: -o-calc(100% - 50px);
+        /* Standard */
+        height: calc(100% - 50px);
+}
+
+div.container {
+    margin: 50px auto;
+    width: 60%;
+    padding: 10px;
+    border: 5px solid #6441A4;
+    display: table;
+}
+
+div.no-streamers {
+    font-size: larger;
+    text-align: center;
+    margin: 1em auto;
+}
+
+.streams-container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+.item {
+    box-sizing: border-box;
+	width: -webkit-calc(50% - 2em);
+	width: calc(50% - 2em);
+    margin: 1em;
+    text-align: center;
+    }
+    
+    .item > a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .item > a:hover{
+        text-decoration: underline;
+    }
+
+.celda {
+	overflow: hidden;
+	border: 2px solid rgba(255, 255, 255, 0.7);
+	position: relative;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+	.item {
+		width: -webkit-calc(33.33% - 2em);
+		width: calc(33.33% - 2em)
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.item {
+		width: -webkit-calc(25% - 2em);
+		width: calc(25% - 2em)
+	}
+}
+
+.celda img {
+	width: 100%;
+	display: block;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s
+}
+
+.celda:hover {
+	border-color: yellow
+}
+
+.celda:hover img {
+	-webkit-transform: scale(1.3);
+	-ms-transform: scale(1.3);
+	transform: scale(1.3)
+}
